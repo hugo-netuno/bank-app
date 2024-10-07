@@ -22,9 +22,7 @@ function App() {
       <h1>Application</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
+          <Route path='/' element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
