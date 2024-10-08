@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from "axios";
 import './Login.css';
 
-async function loginUser(credentials) {
- return fetch('http://localhost:8080/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
+async function loginUser(credentials) {;
+  let userToken = {};
+  await axios.post('http://localhost:8080/login', credentials).then((response) => {
+    userToken.token = response.data.token;
+  }).catch((e) => {
+    alert('Usuario e senha incorretos');
+    return;
+  });
+  return userToken;
 }
 
 export default function Login({ setToken }) {
@@ -23,7 +24,9 @@ export default function Login({ setToken }) {
       username,
       password
     });
-    setToken(token);
+    if (token.token) {
+      setToken(token);
+    }
   }
 
   return(
