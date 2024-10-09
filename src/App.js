@@ -1,9 +1,8 @@
 // https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
-
 // https://stackoverflow.com/questions/63124161/attempted-import-error-switch-is-not-exported-from-react-router-dom
-
 // https://blog.logrocket.com/how-to-use-axios-post-requests/
-
+// https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
+// https://stackoverflow.com/questions/2627650/why-javascript-gettime-is-not-a-function
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
